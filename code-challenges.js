@@ -11,7 +11,7 @@ var people = [
 // Expected output example: "Ford Prefect is a hitchhiker." "Zaphod Beeblebrox is a president of the galaxy." "Arthus Dent is a radio employee."
 
 
-const ex1
+const ex1  test Christmas
 
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDER of the numbers when divided by 3.
