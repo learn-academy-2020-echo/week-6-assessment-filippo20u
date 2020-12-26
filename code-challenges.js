@@ -13,6 +13,8 @@ var people = [
 
 const ex1  test Christmas
 
+26 dicembte
+
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDER of the numbers when divided by 3.
 
