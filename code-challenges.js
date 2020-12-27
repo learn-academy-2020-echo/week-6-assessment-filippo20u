@@ -11,12 +11,12 @@ var people = [
 // Expected output example: "Ford Prefect is a hitchhiker." "Zaphod Beeblebrox is a president of the galaxy." "Arthus Dent is a radio employee."
 
 
-const ex1  test Christmas
-git hub test 
+const sentCap = (arr) => {
+ return "yo"
 
+}
 
-26 dicembte
-
+console.log("1)", sentCap())
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDER of the numbers when divided by 3.
 
@@ -25,7 +25,12 @@ var testingArray1 = [23, "Heyyyy!", 45, -9, 0, "Yo", false]
 var testingArray2 = [5, "Hola", 43, -34, "greetings", true]
 // Expected output: [ 2, 1, -1 ]
 
-
+const filtAndRemainder = (arr) => {
+  return "yo"
+ 
+ }
+ 
+ console.log("2)",filtAndRemainder())
 
 
 
@@ -34,3 +39,16 @@ var testingArray2 = [5, "Hola", 43, -34, "greetings", true]
 var testingArray3 = [3, 7, "hi", 10, 3, "hello", 4, "hi"]
 var testingArray4 = [7, "hi", 3, 1, "hi", 4, "hello", 4, 7]
 // Expected output: [ 3, 7, "hi", 10, "hello", 4, 1 ]
+
+
+const noDuplicates = (arr) => {
+  let nums = arr.filter( 
+    if (typeof.(value) === Number) {
+    } return value
+    
+  )
+    return nums
+ }
+ 
+ console.log("3.1)",noDuplicates(testingArray3))
+ console.log("3.4)",noDuplicates(testingArray4))
