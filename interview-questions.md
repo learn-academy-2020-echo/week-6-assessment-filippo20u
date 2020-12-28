@@ -9,8 +9,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer:
 
-  testtest 26 dicembre nonn uploadate
-  git 2fa
+  
 
   Researched answer:
 

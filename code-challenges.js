@@ -12,11 +12,15 @@ var people = [
 
 
 const sentCap = (arr) => {
- return "yo"
-
+ let describe = arr.map( value => {
+    let namesCap = value.name.split(" ").map(value => value.charAt(0).toUpperCase() + value.slice(1)).join(" ")
+    // console.log (namesCap)
+    return `${namesCap} is ${value.occupation}`
+    })
+      return describe
 }
 
-console.log("1)", sentCap())
+console.log("1)", sentCap(people))
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDER of the numbers when divided by 3.
 
@@ -25,14 +29,14 @@ var testingArray1 = [23, "Heyyyy!", 45, -9, 0, "Yo", false]
 var testingArray2 = [5, "Hola", 43, -34, "greetings", true]
 // Expected output: [ 2, 1, -1 ]
 
-const filtAndRemainder = (arr) => {
-  return "yo"
- 
- }
- 
- console.log("2)",filtAndRemainder())
+const filtAndRemainder =  (arr) => {
+  return arr.filter ( value => typeof value === 'number' ).map (value => value % 3)
+  // console.log (filtered)   
+  // return filtered.map(value => value % 3)
+}
 
-
+console.log("2.1)", filtAndRemainder(testingArray1))
+console.log("2.2)", filtAndRemainder(testingArray2))
 
 // --------------------3) Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 
@@ -40,15 +44,11 @@ var testingArray3 = [3, 7, "hi", 10, 3, "hello", 4, "hi"]
 var testingArray4 = [7, "hi", 3, 1, "hi", 4, "hello", 4, 7]
 // Expected output: [ 3, 7, "hi", 10, "hello", 4, 1 ]
 
-
-const noDuplicates = (arr) => {
-  let nums = arr.filter( 
-    if (typeof.(value) === Number) {
-    } return value
-    
-  )
-    return nums
- }
- 
- console.log("3.1)",noDuplicates(testingArray3))
- console.log("3.4)",noDuplicates(testingArray4))
+  const noDup = (arr1, arr2) => {
+    let nodup = arr1.concat(arr2)
+    return nodup.filter((value, index) => 
+    // The indexOf() method returns the position of the first occurrence of a specified value in a string.
+    nodup.indexOf(value) === index
+    )
+  }
+    console.log ("3:", noDup(testingArray3,testingArray4))
