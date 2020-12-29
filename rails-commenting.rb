@@ -6,25 +6,25 @@
 
 # FILE: app/controller/blog_posts_controller.rb
 
-# 1)
+# 1) define the name of my controller
 class BlogPostsController < ApplicationController
   def index
-    # 2)
+    # 2) define a variable to show all the posts of my blog
     @posts = BlogPost.all
   end
 
   def show
-    # 3)
+    # 3) call an id to show a particular blog post/database entry
     @post = BlogPost.find(params[:id])
   end
 
-  # 4)
+  # 4) it doesn't interact with the database but it interacts with the database
   def new
     @post = Post.new
   end
 
   def create
-    # 5)
+    # 5)  define a method to call the ruby action to create a new instance in my database
     @post = BlogPost.create(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)
@@ -53,7 +53,7 @@ class BlogPostsController < ApplicationController
     if @post.destroy
       redirect_to blog_posts_path
     else
-      # 7)
+      # 7) if the destroy comand doesn't work, the destroy method shows the post
       redirect_to blog_post_path(@post)
     end
   end

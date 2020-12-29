@@ -18,6 +18,8 @@ Then, research the question to expand on your answer. Even if you feel you have 
 2. Which RESTful routes must always be passed params? Why?
 
   Your answer:
+  Restful(Update,create, index, show, new, show, destroy, edit)
+  I need params for restful routes that are acting on a specific id like: create, detroy, edite, update
 
   Researched answer:
 
@@ -26,6 +28,8 @@ Then, research the question to expand on your answer. Even if you feel you have 
 3. Name three rails generator commands. What is created by each?
 
   Your answer:
+
+  rails create 
 
   Researched answer:
 
