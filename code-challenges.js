@@ -13,8 +13,10 @@ var people = [
 
 const sentCap = (arr) => {
  let describe = arr.map( value => {
+  //  setting a new variable that split the array to capitalize first and last name and joined them back together
     let namesCap = value.name.split(" ").map(value => value.charAt(0).toUpperCase() + value.slice(1)).join(" ")
     // console.log (namesCap)
+    // string interpolation with the new variable from line 17 and the occupation from the original array of objects
     return `${namesCap} is ${value.occupation}`
     })
       return describe
@@ -30,9 +32,10 @@ var testingArray2 = [5, "Hola", 43, -34, "greetings", true]
 // Expected output: [ 2, 1, -1 ]
 
 const filtAndRemainder =  (arr) => {
+//  filter only numbers using typeof and map them getting only the remainder of the numbers divided by 3.
   return arr.filter ( value => typeof value === 'number' ).map (value => value % 3)
   // console.log (filtered)   
-  // return filtered.map(value => value % 3)
+  
 }
 
 console.log("2.1)", filtAndRemainder(testingArray1))
@@ -45,7 +48,9 @@ var testingArray4 = [7, "hi", 3, 1, "hi", 4, "hello", 4, 7]
 // Expected output: [ 3, 7, "hi", 10, "hello", 4, 1 ]
 
   const noDup = (arr1, arr2) => {
+    // merging the two arrays in one using .concat 
     let nodup = arr1.concat(arr2)
+    // filter the new array using hte indexOf built in method.
     return nodup.filter((value, index) => 
     // The indexOf() method returns the position of the first occurrence of a specified value in a string.
     nodup.indexOf(value) === index

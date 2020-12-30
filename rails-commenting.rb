@@ -6,7 +6,7 @@
 
 # FILE: app/controller/blog_posts_controller.rb
 
-# 1) define the name of my controller
+# 1) define the name of my controller "BlogPosts" generated using rails 
 class BlogPostsController < ApplicationController
   def index
     # 2) define a variable to show all the posts of my blog
@@ -14,17 +14,17 @@ class BlogPostsController < ApplicationController
   end
 
   def show
-    # 3) call an id to show a particular blog post/database entry
+    # 3) show a blog post with the params :id called
     @post = BlogPost.find(params[:id])
   end
 
-  # 4) it doesn't interact with the database but it interacts with the database
+  # 4) method required to render a form to create a new post
   def new
     @post = Post.new
   end
 
   def create
-    # 5)  define a method to call the ruby action to create a new instance in my database
+    # 5)  define a method to call the ruby action to create a new instance in my database, it's needed in addtion to the method "new"
     @post = BlogPost.create(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)
@@ -39,7 +39,7 @@ class BlogPostsController < ApplicationController
 
   def update
     @post = BlogPost.find(params[:id])
-    # 6)
+    # 6) code to update an attribute defined in line 41
     @post.update(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)
@@ -53,15 +53,15 @@ class BlogPostsController < ApplicationController
     if @post.destroy
       redirect_to blog_posts_path
     else
-      # 7) if the destroy comand doesn't work, the destroy method shows the post
+      # 7) if the destroy command doesn't work, it will redirect to the blog post that the user is trying to delete
       redirect_to blog_post_path(@post)
     end
   end
 
-  # 8)
+  # 8) it protects the code below line 62 from being called outside of the controller
   private
   def blog_post_params
-    # 9)
+    # 9) syntax of strong params, require it set a requrement parameter to be passed to create or update a blog post, permit indicates the attributes allowed to be created
     params.require(:blog_post).permit(:title, :content)
   end
 
@@ -71,6 +71,6 @@ end
 # FILE: app/models/blog_post.rb
 
 class BlogPost < ApplicationRecord
-  # 10)
+  # 10) it creates the association between the model BlogPost and the Comments model with its foreign key.
   has_many :comments
 end
