@@ -14,7 +14,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Researched answer:
 
-  The foreign key always goes on the belongs_to side and  by convention  should always be the modelname_id:integer. 
+  The foreign key always goes on the belongs_to side and  by convention  should always be the modelname_id:integer.
 
 
 
@@ -23,12 +23,12 @@ Then, research the question to expand on your answer. Even if you feel you have 
   Your answer:
 
   I need params for restful routes that are acting on a specific id so: destroy, edit, update and show.
-  
+
 
   Researched answer:
 
   The restful routes show, create, destroy, edit and update require an :id params, they are all acting on a specific entry in the database.
-  Index and new are not interacting with a specific entry in the database so they don't require a params id in their controller method. 
+  Index and new are not interacting with a specific entry in the database so they don't require a params id in their controller method.
 
 
 
@@ -36,14 +36,14 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer:
 
-  rails create resource "Classname" : 
+  rails create resource "Classname" :
   creates model view and controller and set up routes.
 
 
-  rails create model "Classname": 
+  rails create model "Classname":
   creates schema.rb with the values indicated for the database and a model for the class.
 
-  rails create controller  "Classname", 
+  rails create controller  "Classname",
   controller is responsible for routing external requests to internal actions, handles URLs. It coordinates the interaction between the user,    the views, and the model.
 
 
@@ -65,7 +65,7 @@ method="GET"    /users
 
 users#index = display all the users
 
-method="GET"    /users/1 
+method="GET"    /users/1
 
 users#show = display user1
 
@@ -93,3 +93,21 @@ users#destroy   = delete user1
 
 5. As a developer, you want to make an application that will help you manage your to do list. For the MVP, you want to create just the user's view. Create 10 user stories that will help you get your application started.
 
+
+- 1) As a user, I can see my to-do list titles listed on the home page of the application.
+- 2) As a user, I can click on a task and see the description.
+- 3) As a user, I can see a button where I can redirected to a page to create a new task.
+- 4) As a user, I can specify a description of the task.
+- 5) As a user, I can set a due date for the task created.
+- 6) As a user, I can decide if I want to set a remainder/notification.
+- 7) As a user, I can click a button that will submit my task to the database.
+- 8) As a user, when I submit/create a new task, I am redirected to the home page.
+- 9) As a user, I can  select a task and click on a button named "completed" and delete it from the database and refresh the page to be able to visualize the list of tasks updated
+- 10) As a user, I can export/download my to do list in a text file.
+
+
+
+
+
+- 5 As a user, I can click a button that will take me from the home page to a page where I can create a blog post.
+- 6 As a user, I can navigate from the form back to the home page.
