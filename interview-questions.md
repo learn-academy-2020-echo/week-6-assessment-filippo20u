@@ -108,6 +108,3 @@ users#destroy   = delete user1
 
 
 
-
-- 5 As a user, I can click a button that will take me from the home page to a page where I can create a blog post.
-- 6 As a user, I can navigate from the form back to the home page.
